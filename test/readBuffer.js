@@ -13,24 +13,18 @@ beforeEach(function(done) {
   });
 });
 
-describe('grib', function() {
-  describe('#readBuffer()', function() {
-    it('should return null when no buffer given', function() {
-      assert.strictEqual(null, grib.readBuffer());
-    });
+describe('grib.readBuffer()', function() {
+  it('should return null when no buffer given', function() {
+    assert.strictEqual(null, grib.readBuffer());
   });
 
-  describe('#readBuffer()', function() {
-    it('should return an array of messages with a valid buffer', function() {
-      var msgs = grib.readBuffer(tpcprblty_grib2);
-      assert.ok(msgs.length >= 1);
-      assert.ok(msgs[0]);
-    });
+  it('should return an array of messages with a valid buffer', function() {
+    var msgs = grib.readBuffer(tpcprblty_grib2);
+    assert.ok(msgs.length >= 1);
+    assert.ok(msgs[0]);
   });
 
-  describe('#readBuffer()', function() {
-    it('should throw an error with an invalid buffer', function() {
-      assert.throws(function() { grib.readBuffer("one, two, three"); });
-    });
+  it('should throw an error with an invalid buffer', function() {
+    assert.throws(function() { grib.readBuffer("one, two, three"); });
   });
 });
