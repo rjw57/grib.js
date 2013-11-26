@@ -25,6 +25,6 @@ describe('grib.readBuffer()', function() {
   });
 
   it('should throw an error with an invalid buffer', function() {
-    assert.throws(function() { grib.readBuffer("one, two, three"); });
+    assert.throws(function() { grib.readBuffer(new Buffer("one, two, three")); });
   });
 });
