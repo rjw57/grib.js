@@ -1,5 +1,10 @@
 exports.readBuffer = function(buffer, options) {
   if(undefined == buffer) { return null; }
+  
+  var gribs = [];
+  gribs.push(new exports.Grib2(buffer));
+
+  return gribs;
 }
 
 // Get a big endian 16-bit integer from the specified dataview
