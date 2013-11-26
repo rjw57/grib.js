@@ -5,7 +5,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/rjw57/jsgrib"
+    "url": "https://github.com/rjw57/grib.js"
   },
   "author": {
     "name": "Rich Wareham",
