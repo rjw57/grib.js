@@ -1,0 +1,19 @@
+{
+  "name": "grib",
+  "version": "0.0.1",
+  "description": "GRIB2 parser",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rjw57/jsgrib"
+  },
+  "author": {
+    "name": "Rich Wareham",
+    "email": "rich@richwareham.com",
+    "url": "http://richwareham.com"
+  },
+  "main": "grib",
+  "dependencies": {
+    "mocha": ">=1.0.0"
+  }
+}
