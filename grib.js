@@ -1,4 +1,6 @@
-
+exports.readBuffer = function(buffer, options) {
+  if(undefined == buffer) { return null; }
+}
 
 // Get a big endian 16-bit integer from the specified dataview
 var getUint16 = function(dv, offset) {
