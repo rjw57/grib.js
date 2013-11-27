@@ -1,7 +1,6 @@
 var assert = require('assert');
 var fs = require('fs');
-
-var grib = require('../grib');
+var grib = require('../index');
 
 var tpcprblty_grib2 = null;
 

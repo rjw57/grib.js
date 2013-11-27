@@ -1,5 +1,5 @@
 var assert = require('assert');
-var grib = require('../grib');
+var grib = require('../index');
 
 describe('grib.readFile()', function() {
   it('should throw if no arguments given', function() {

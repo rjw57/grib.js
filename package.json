@@ -3,17 +3,23 @@
   "version": "0.0.1",
   "description": "GRIB2 parser",
   "license": "MIT",
+  "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/rjw57/grib.js"
+    "url": "git://github.com/rjw57/grib.js.git"
   },
   "author": {
     "name": "Rich Wareham",
     "email": "rich@richwareham.com",
     "url": "http://richwareham.com"
   },
-  "main": "grib",
   "dependencies": {
+    "dissolve": ">=0.3.0"
+  },
+  "devDependencies": {
     "mocha": ">=1.0.0"
+  },
+  "scripts": {
+    "test": "mocha"
   }
 }
