@@ -1,10 +1,25 @@
-exports.readBuffer = function(buffer, options) {
-  if(undefined == buffer) { return null; }
+exports.readBuffer = function(buffer, cb) {
+  if(undefined == buffer) { 
+    cb('No buffer passed');
+    return;
+  }
   
-  var gribs = [];
-  gribs.push(new exports.Grib2(buffer));
+  var gribs = [], err = null;
+  try {
+    gribs.push(new exports.Grib2(buffer));
+  } catch(e) {
+    err = e;
+  }
+  cb(err, gribs);
+}
 
-  return gribs;
+// NODE.js specific
+exports.readFile = function(fileName, cb) {
+  var fs = require('fs');
+  fs.readFile(fileName, function(err, data) {
+    if(err) { cb(err); return; }
+    exports.readBuffer(data, cb);
+  });
 }
 
 // Get a big endian 16-bit integer from the specified dataview
