@@ -1,6 +1,6 @@
 var gribParse = require('./lib/parser');
-
 var tables = require('./lib/tables');
+
 for(var tableName in tables.tables) {
   exports[tableName] = tables.tables[tableName];
 }
