@@ -15,17 +15,14 @@ exports.readFile = function(fileName, cb) {
 }
 
 exports.readBuffer = function(buffer, cb) {
-  var parser = gribParse.createParser(), msg, msgs = [];
+  var msgs;
 
   // Write the contents of the buffer catching any parse errors
   try {
-    parser.write(buffer);
+    msgs = gribParse.parseBuffer(buffer);
   } catch(e) {
     return cb(e, null);
   }
-
-  // Read all the parsed messages
-  while(msg = parser.read()) { msgs.push(msg); }
 
   // If no messages were parsed throw an error
   if(msgs.length == 0) { return cb(new Error('No GRIB messages could be decoded')); }

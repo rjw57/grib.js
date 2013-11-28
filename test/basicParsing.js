@@ -28,8 +28,8 @@ function makeTest(fileName) {
   var desc = files[fileName];
 
   if(!desc) { 
-    describe(fileName, function() {
-      it('should not parse', function(done) {
+    describe('parsing ' + fileName, function() {
+      it('should fail', function(done) {
         grib.readFile('samples/' + fileName, function(err, msgs) {
           assert.ok(err);
           done();
@@ -40,8 +40,8 @@ function makeTest(fileName) {
     return;
   }
 
-  describe(fileName, function() {
-    it('should have ' + desc.count + ' record(s)', function(done) {
+  describe('parsing ' + fileName, function() {
+    it('should give ' + desc.count + ' record(s)', function(done) {
       grib.readFile('samples/' + fileName, function(err, msgs) {
         if(err) { return done(err); }
         assert.strictEqual(msgs.length, desc.count);
