@@ -23,6 +23,13 @@ exports.readData = function(data, cb) {
   cb(null, msgs);
 }
 
+exports.readUrl = function(url, cb) {
+  jBinary.loadData(url, function(err, data) {
+    if(err) return cb(err);
+    exports.readData(data, cb);
+  });
+}
+
 // NODE.js specific
 exports.readFile = function(fileName, cb) {
   var fs = require('fs');

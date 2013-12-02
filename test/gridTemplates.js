@@ -1,5 +1,6 @@
 var assert = require('assert');
 var grib = require('../index');
+var files = require('./lib/fixtures').files;
 
 describe('grid template', function() {
   var msgs = null;
@@ -7,7 +8,7 @@ describe('grid template', function() {
   describe('of gfs.grb', function() {
     before(function(done) {
       msgs = null;
-      grib.readFile('samples/gfs.grb', function(err, msgs_) {
+      grib.readUrl(files['gfs.grb'].url, function(err, msgs_) {
         if(err) return done(err);
         msgs = msgs_;
         done();
@@ -42,7 +43,7 @@ describe('grid template', function() {
   describe('of dspr.temp.bin', function() {
     before(function(done) {
       msgs = null;
-      grib.readFile('samples/dspr.temp.bin', function(err, msgs_) {
+      grib.readUrl(files['dspr.temp.bin'].url, function(err, msgs_) {
         if(err) return done(err);
         msgs = msgs_;
         done();
@@ -75,7 +76,7 @@ describe('grid template', function() {
   describe('of ngm.grb', function() {
     before(function(done) {
       msgs = null;
-      grib.readFile('samples/ngm.grb', function(err, msgs_) {
+      grib.readUrl(files['ngm.grb'].url, function(err, msgs_) {
         if(err) return done(err);
         msgs = msgs_;
         done();
@@ -108,7 +109,7 @@ describe('grid template', function() {
   describe('of ds.maxt.bin', function() {
     before(function(done) {
       msgs = null;
-      grib.readFile('samples/ds.maxt.bin', function(err, msgs_) {
+      grib.readUrl(files['ds.maxt.bin'].url, function(err, msgs_) {
         if(err) return done(err);
         msgs = msgs_;
         done();
@@ -141,7 +142,7 @@ describe('grid template', function() {
   describe('of ecmwf_tigge.grb', function() {
     before(function(done) {
       msgs = null;
-      grib.readFile('samples/ecmwf_tigge.grb', function(err, msgs_) {
+      grib.readUrl(files['ecmwf_tigge.grb'].url, function(err, msgs_) {
         if(err) return done(err);
         msgs = msgs_;
         done();
@@ -178,7 +179,7 @@ describe('grid template', function() {
   describe('of eumetsat_precip.grb', function() {
     before(function(done) {
       msgs = null;
-      grib.readFile('samples/eumetsat_precip.grb', function(err, msgs_) {
+      grib.readUrl(files['eumetsat_precip.grb'].url, function(err, msgs_) {
         if(err) return done(err);
         msgs = msgs_;
         done();

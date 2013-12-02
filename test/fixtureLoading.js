@@ -9,7 +9,6 @@ var makeTests = function(fileName) { return (function() {
 
   before(function(done) {
     var url = fileSpec.url;
-    console.log('Loading ' + url);
     jBinary.loadData(fileSpec.url, function(err, data) {
       if(err) return done(err);
       fileData = data;
