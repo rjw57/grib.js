@@ -78,7 +78,7 @@ module.exports = function(config) {
 
     browserify: {
       extension: ['.coffee'],
-      transform: ['brfs'],
+      transform: [],
       // require: ['native-buffer-browserify'],
       watch: true
     },
