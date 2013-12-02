@@ -1,11 +1,9 @@
 all:
 	npm install
 
-test: node_modules/.bin/mocha
+test: all
 	node_modules/.bin/mocha --reporter spec --no-colors
-
-node_modules/.bin/mocha:
-	npm install mocha
+	node_modules/.bin/karma start config/karma.conf.js --single-run
 
 .PHONY: all test
 
