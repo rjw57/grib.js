@@ -19,7 +19,8 @@
   "devDependencies": {
     "mocha": "~1.14.0",
     "karma": "~0.10.7",
-    "karma-browserify": "0.0.6"
+    "karma-browserify": "0.0.6",
+    "karma-mocha": "~0.1.1"
   },
   "scripts": {
     "test": "mocha -R dot"
