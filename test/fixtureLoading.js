@@ -15,6 +15,7 @@ var makeTests = function(fileName) { return (function() {
       fileData = data;
       grib.readData(fileData, function(err, msgs_) {
         parseErr = err; msgs = msgs_;
+        if((fileSpec.count !== null) && err) return done(err);
         done();
       });
     });
