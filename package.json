@@ -14,11 +14,12 @@
     "url": "http://richwareham.com"
   },
   "dependencies": {
-    "binary": ">=0.3.0"
+    "jbinary": "~1.6.0"
   },
   "devDependencies": {
-    "mocha": ">=1.0.0",
-    "browserify": ">=2.0.0"
+    "mocha": "~1.14.0",
+    "karma": "~0.10.7",
+    "karma-browserify": "0.0.6"
   },
   "scripts": {
     "test": "mocha -R dot"
