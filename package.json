@@ -24,6 +24,6 @@
     "karma-phantomjs-launcher": "~0.1.1"
   },
   "scripts": {
-    "test": "mocha -R dot && karma start --single-run --browsers Firefox,PhantomJS config/karma.conf.js"
+    "test": "mocha -R dot && node_modules/karma/bin/karma start --single-run --browsers Firefox,PhantomJS config/karma.conf.js"
   }
 }
