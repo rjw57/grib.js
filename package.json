@@ -17,11 +17,12 @@
     "jbinary": "~1.6.0"
   },
   "devDependencies": {
-    "mocha": "~1.14.0",
+    "commander": "^2.11.0",
     "karma": "~0.12.17",
     "karma-browserify": "0.2.1",
     "karma-mocha": "~0.1.1",
-    "karma-phantomjs-launcher": "~0.1.1"
+    "karma-phantomjs-launcher": "~0.1.1",
+    "mocha": "~1.14.0"
   },
   "scripts": {
     "test": "mocha -R dot && node_modules/karma/bin/karma start --single-run --browsers Firefox,PhantomJS config/karma.conf.js"
