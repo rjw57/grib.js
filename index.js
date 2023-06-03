@@ -1,6 +1,6 @@
-var gribParse = require('./lib/parser');
-var tables = require('./lib/tables');
-var jBinary = require('jbinary');
+const gribParse = require('./lib/parser');
+const tables = require('./lib/tables');
+const loadData = require('./load-data');
 
 for(var tableName in tables.tables) {
   exports[tableName] = tables.tables[tableName];
@@ -8,11 +8,10 @@ for(var tableName in tables.tables) {
 
 exports.readData = function(data, cb) {
   var msgs;
-  var dataView = new jBinary(data).view;
 
   // Write the contents of the buffer catching any parse errors
   try {
-    msgs = gribParse.parseDataView(dataView);
+    msgs = gribParse.parseDataView(data);
   } catch(e) {
     return cb(e, null);
   }
@@ -24,7 +23,7 @@ exports.readData = function(data, cb) {
 }
 
 exports.readUrl = function(url, cb) {
-  jBinary.loadData(url, function(err, data) {
+  loadData(url, function(err, data) {
     if(err) return cb(err);
     exports.readData(data, cb);
   });

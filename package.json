@@ -13,9 +13,7 @@
     "email": "rich@richwareham.com",
     "url": "http://richwareham.com"
   },
-  "dependencies": {
-    "jbinary": "~1.6.0"
-  },
+  "keywords": ["grib", "forecast", "noaa", "weather", "wind"],
   "devDependencies": {
     "commander": "^2.11.0",
     "karma": "^6.4.2",
