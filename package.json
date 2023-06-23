@@ -13,18 +13,17 @@
     "email": "rich@richwareham.com",
     "url": "http://richwareham.com"
   },
-  "dependencies": {
-    "jbinary": "~1.6.0"
-  },
+  "keywords": ["grib", "forecast", "noaa", "weather", "wind"],
   "devDependencies": {
     "commander": "^2.11.0",
-    "karma": "~0.12.17",
-    "karma-browserify": "0.2.1",
-    "karma-mocha": "~0.1.1",
-    "karma-phantomjs-launcher": "~0.1.1",
-    "mocha": "~1.14.0"
+    "karma": "^6.4.2",
+    "karma-browserify": "^8.1.0",
+    "karma-chrome-launcher": "^3.2.0",
+    "karma-firefox-launcher": "^2.1.2",
+    "karma-mocha": "^2.0.1",
+    "mocha": "^10.2.0"
   },
   "scripts": {
-    "test": "mocha -R dot && node_modules/karma/bin/karma start --single-run --browsers Firefox,PhantomJS config/karma.conf.js"
+    "test": "mocha && karma start --single-run --browsers Firefox,Chrome config/karma.conf.js"
   }
 }
