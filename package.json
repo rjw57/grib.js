@@ -1,17 +1,12 @@
 {
-  "name": "grib",
-  "version": "0.0.1",
-  "description": "GRIB2 parser",
+  "name": "grib-js",
+  "version": "1.0.0",
+  "description": "Full JavaScript GRIB2 parser",
   "license": "MIT",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/rjw57/grib.js.git"
-  },
-  "author": {
-    "name": "Rich Wareham",
-    "email": "rich@richwareham.com",
-    "url": "http://richwareham.com"
+    "url": "git://github.com/gmerciel/grib.js.git"
   },
   "keywords": ["grib", "forecast", "noaa", "weather", "wind"],
   "devDependencies": {
