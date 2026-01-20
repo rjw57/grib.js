@@ -9,9 +9,10 @@ const grib = require('./index');
 
 program
 .version('0.0.1')
-.option('-o, --out [optional]','outfile (else stdout)')
-.option('-i, --input <requred>','input file (else stdin)')
-.option('-p, --pretty','pretty print output json')
+.option('-c, --convert [optional]', 'convert to grib2json format')
+.option('-o, --out [optional]', 'outfile (else stdout)')
+.option('-i, --input <requred>', 'input file (else stdin)')
+.option('-p, --pretty', 'pretty print output json')
 .parse(process.argv); // end with parse to parse through the input
 
 
@@ -23,6 +24,10 @@ jBinary.loadData(program.input, function(err, data) {
     if(err) {
         console.error(JSON.stringify(err, null, 4));
         exit(1);
+    }
+
+    if(program.convert) {
+        msgs_ = grib.convertData(msgs_)
     }
 
     if(program.out) {

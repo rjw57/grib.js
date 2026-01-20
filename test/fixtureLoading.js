@@ -1,15 +1,14 @@
 var assert = require('assert');
-var jBinary = require('jbinary');
 var files = require('./lib/fixtures').files;
 var grib = require('../index');
+const loadData = require('../load-data');
 
 var makeTests = function(fileName) { return (function() {
   var fileData, fileSpec = files[fileName];
   var parseErr, msgs, fileData;
 
   before(function(done) {
-    var url = fileSpec.url;
-    jBinary.loadData(fileSpec.url, function(err, data) {
+    loadData(fileSpec.url, function(err, data) {
       if(err) return done(err);
       fileData = data;
       grib.readData(fileData, function(err, msgs_) {

@@ -25,7 +25,7 @@ module.exports = function(config) {
     ],
 
     preprocessors: {
-      '**/*.coffee': ['coffee'],
+      // '**/*.coffee': ['coffee'],
       'test/*.js': ['browserify'],
     },
 
@@ -77,7 +77,7 @@ module.exports = function(config) {
     singleRun: false,
 
     browserify: {
-      extension: ['.coffee'],
+      //extension: ['.coffee'],
       transform: [],
       // require: ['native-buffer-browserify'],
       watch: true
@@ -86,7 +86,6 @@ module.exports = function(config) {
     plugins: [
       'karma-chrome-launcher',
       'karma-firefox-launcher',
-      'karma-phantomjs-launcher',
       'karma-browserify',
       'karma-mocha'
     ]

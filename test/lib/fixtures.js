@@ -23,6 +23,11 @@ exports.files = {
     referenceTimeSignificance: grib.ReferenceTimeSignificance.START_OF_FORECAST,
   },
   'gfs.t12z.pgrbf120.2p5deg.grib2': { count: 307 },
+  'gfs.t12z.pgrb2.1p00.f000':  {
+    count: 2,
+    referenceTime: new Date(2023, 5, 1, 12, 0, 0),
+    referenceTimeSignificance: grib.ReferenceTimeSignificance.START_OF_FORECAST,
+  },
   'ngm.grb': { count: 5 },
   'reduced_latlon_surface.grib2': { count: 1 },
   'regular_latlon_surface.grib1': { count: null },
